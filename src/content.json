@@ -161,13 +161,13 @@
         "sourceSha256": "6109e80f6f0c6b1427687798d29a032ca338aadb2964d15dc0f3a1e4e8e7a3eb"
       },
       {
-        "src": "/assets/projects/paths/18-1600.webp?v=c7f1350794ad",
-        "srcSet": "/assets/projects/paths/18-1600.webp?v=c7f1350794ad 1600w, /assets/projects/paths/18-2400.webp?v=c7f1350794ad 2400w, /assets/projects/paths/18.png?v=c7f1350794ad 3840w",
-        "original": "/assets/projects/paths/18.png?v=c7f1350794ad",
+        "src": "/assets/projects/paths/18-1600.webp?v=7cd117400008",
+        "srcSet": "/assets/projects/paths/18-1600.webp?v=7cd117400008 1600w, /assets/projects/paths/18-2400.webp?v=7cd117400008 2400w, /assets/projects/paths/18.png?v=7cd117400008 3840w",
+        "original": "/assets/projects/paths/18.png?v=7cd117400008",
         "width": 3840,
         "height": 3634,
         "alt": "Paths travel redesign — page 18: Create an itinerary. Original case study in Chinese.",
-        "sourceSha256": "c7f1350794ade979c57bc58033e87e21c2a3d2f0acc176fa5f8a6e0b911781fe"
+        "sourceSha256": "7cd1174000083e45ecf607d42b86b7525bed159713398a0862c18b5a2b1110f8"
       },
       {
         "src": "/assets/projects/paths/19-1600.webp?v=1c770191b301",
@@ -188,13 +188,13 @@
         "sourceSha256": "12de77e318b86ccd373d48ac230d5c481e69677c2ed867605569aeda0346d912"
       },
       {
-        "src": "/assets/projects/paths/21-1600.webp?v=b618b8911dcf",
-        "srcSet": "/assets/projects/paths/21-1600.webp?v=b618b8911dcf 1600w, /assets/projects/paths/21-2400.webp?v=b618b8911dcf 2400w, /assets/projects/paths/21.png?v=b618b8911dcf 3840w",
-        "original": "/assets/projects/paths/21.png?v=b618b8911dcf",
+        "src": "/assets/projects/paths/21-1600.webp?v=9dca5a0dce9c",
+        "srcSet": "/assets/projects/paths/21-1600.webp?v=9dca5a0dce9c 1600w, /assets/projects/paths/21-2400.webp?v=9dca5a0dce9c 2400w, /assets/projects/paths/21.png?v=9dca5a0dce9c 3840w",
+        "original": "/assets/projects/paths/21.png?v=9dca5a0dce9c",
         "width": 3840,
         "height": 3676,
         "alt": "Paths travel redesign — page 21: Itinerary editing and comparison. Original case study in Chinese.",
-        "sourceSha256": "b618b8911dcfef6aa3091c3c29e6c8a6544bf2163eb34065abe76bde4e528d71"
+        "sourceSha256": "9dca5a0dce9c3c8792a817fb2a6aaf4c4d5d74c29ea06c4bd41e495369d895ed"
       },
       {
         "src": "/assets/projects/paths/22-1600.webp?v=1f40998c415e",

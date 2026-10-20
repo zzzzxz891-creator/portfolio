@@ -149,7 +149,7 @@ function FeaturedCase() {
     {project.pages.length > 0 && <div className="case-reading-info"><h3>{project.title}</h3></div>}
     {project.pages.length > 0 && <CaseContents />}
     {project.pages.length ? <div className="case-pages" ref={container}>
-      {pageGroups.map(group => <div className={`case-page${group.length > 1 ? ' is-joined' : ''}`} key={group[0].page.src} data-page-group={group.map(item => item.index + 1).join('-')}>
+      {pageGroups.map(group => <div className={`case-page${group.length > 1 ? ' is-joined' : ''}${[5, 8, 11, 12].includes(group[0].index + 1) ? ' is-chapter-start' : ''}`} key={group[0].page.src} data-page-group={group.map(item => item.index + 1).join('-')}>
         {group.map(({ page, index }) => <figure className="case-sheet" key={page.src} data-page-number={index + 1} id={caseChapters.find(chapter => chapter.page === index + 1 && !chapter.offset)?.id}>
         {caseChapters.filter(chapter => chapter.page === index + 1 && chapter.offset).map(chapter => <span key={chapter.id} id={chapter.id} className="case-chapter-marker" style={{ top: chapter.offset }} aria-hidden="true" />)}
         <button className="case-page-link" onClick={() => { setZoomed(false); setActivePage(index); }} aria-label={`View page ${index + 1} of ${project.pages.length} in full size`} title={`View page ${String(index + 1).padStart(2, '0')} in full size`}>

@@ -26,13 +26,13 @@
         "sourceSha256": "b2920eaf6d63a09cc99458f716383ec5a93a01406f5146f0217828130c341f54"
       },
       {
-        "src": "/assets/projects/paths/03-1600.webp?v=212e6ea0702a",
-        "srcSet": "/assets/projects/paths/03-1600.webp?v=212e6ea0702a 1600w, /assets/projects/paths/03-2400.webp?v=212e6ea0702a 2400w, /assets/projects/paths/03.png?v=212e6ea0702a 3840w",
-        "original": "/assets/projects/paths/03.png?v=212e6ea0702a",
+        "src": "/assets/projects/paths/03-1600.webp?v=6fd1dc99b0f6",
+        "srcSet": "/assets/projects/paths/03-1600.webp?v=6fd1dc99b0f6 1600w, /assets/projects/paths/03-2400.webp?v=6fd1dc99b0f6 2400w, /assets/projects/paths/03.png?v=6fd1dc99b0f6 3840w",
+        "original": "/assets/projects/paths/03.png?v=6fd1dc99b0f6",
         "width": 3840,
-        "height": 4708,
+        "height": 5206,
         "alt": "Paths travel redesign — page 03: Design process and product analysis. Original case study in Chinese.",
-        "sourceSha256": "212e6ea0702ac4bae029eb669e265735e337c906ff4f92594bc7b994cbfe5746"
+        "sourceSha256": "6fd1dc99b0f657a76d8af7724071ac6dc80a1f736fd92a3904abb7ea7fc2ba6e"
       },
       {
         "src": "/assets/projects/paths/04-1600.webp?v=834030c7fd8b",
@@ -261,13 +261,13 @@
         "joinPrevious": true
       },
       {
-        "src": "/assets/projects/paths/29-1600.webp?v=1bee6a27b2db",
-        "srcSet": "/assets/projects/paths/29-1600.webp?v=1bee6a27b2db 1600w, /assets/projects/paths/29-2400.webp?v=1bee6a27b2db 2400w, /assets/projects/paths/29.png?v=1bee6a27b2db 3840w",
-        "original": "/assets/projects/paths/29.png?v=1bee6a27b2db",
+        "src": "/assets/projects/paths/29-1600.webp?v=c92a65e2d758",
+        "srcSet": "/assets/projects/paths/29-1600.webp?v=c92a65e2d758 1600w, /assets/projects/paths/29-2400.webp?v=c92a65e2d758 2400w, /assets/projects/paths/29.png?v=c92a65e2d758 3840w",
+        "original": "/assets/projects/paths/29.png?v=c92a65e2d758",
         "width": 3840,
-        "height": 2694,
+        "height": 2326,
         "alt": "Paths travel redesign — page 29: Reflection and future improvements. Original case study in Chinese.",
-        "sourceSha256": "1bee6a27b2db0ef6dafa897c264ae10c27b98eab08cea01a39709c9fcb9d0797"
+        "sourceSha256": "c92a65e2d758346e0dddcec796239e4e24f1159fdd454675b31f359f8719543c"
       }
     ]
   }

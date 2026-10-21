@@ -168,8 +168,8 @@ body{min-width:0}
 /* Each letter rolls once on hover, as in the supplied navigation recording. */
 .main-nav a:hover{opacity:1}
 .main-nav a[aria-current="page"]{text-decoration:none}
-.nav-roll{display:inline-flex;align-items:center;white-space:nowrap;line-height:1.15}
-.nav-roll-glyph{display:inline-block;height:1.15em;overflow:hidden}
+.nav-roll{display:inline-flex;align-items:center;white-space:nowrap;line-height:1.15;height:1.15em;overflow:hidden;padding-inline:3px;margin-inline:-3px}
+.nav-roll-glyph{display:inline-block;height:1.15em;overflow:visible}
 .nav-roll-track{display:flex;flex-direction:column;transform:translate3d(0,0,0);transition:transform 440ms cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--glyph-index)*22ms);will-change:transform}
 .nav-roll-track>span{display:block;height:1.15em}
 .main-nav a:is(:hover,:focus-visible) .nav-roll-track{transform:translate3d(0,-50%,0)}

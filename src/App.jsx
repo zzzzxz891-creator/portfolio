@@ -63,10 +63,20 @@ function Downloads() {
   </div>;
 }
 
+function RollingNavLink({ href, label, ...props }) {
+  return <LocalLink href={href} aria-label={label} {...props}>
+    <span className="nav-roll" aria-hidden="true">
+      {[...label].map((letter, index) => <span className="nav-roll-glyph" key={`${letter}-${index}`} style={{ '--glyph-index': index }}>
+        <span className="nav-roll-track"><span>{letter}</span><span>{letter}</span></span>
+      </span>)}
+    </span>
+  </LocalLink>;
+}
+
 function Header({ worksPage }) {
   return <header className="site-header">
     <LocalLink className="wordmark" href="/" aria-label="Zhao Xuanzhu home">Zhao Xuanzhu</LocalLink>
-    <nav className="main-nav" aria-label="Main navigation"><LocalLink href="/works" aria-current={worksPage ? 'page' : undefined}>Work</LocalLink><LocalLink href="/#about">About</LocalLink></nav>
+    <nav className="main-nav" aria-label="Main navigation"><RollingNavLink href="/works" label="Work" aria-current={worksPage ? 'page' : undefined} /><RollingNavLink href="/#about" label="About" /></nav>
     <Downloads />
   </header>;
 }

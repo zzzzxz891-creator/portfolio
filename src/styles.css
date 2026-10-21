@@ -155,6 +155,7 @@ body{min-width:0}
 .flow-download,.flow-end a{display:inline-flex;align-items:center;gap:9px;color:#bbb;font-size:12px;white-space:nowrap;min-height:36px}
 .flow-pages{background:#fff}
 .flow-sheet{padding-bottom:clamp(16px,2vw,32px);margin:0}
+.flow-sheet.is-chapter-break{padding-bottom:clamp(60px,6vw,104px)}
 .flow-sheet:last-child{padding-bottom:0}
 .flow-page-link{display:block;width:100%;cursor:zoom-in;text-align:left}
 .flow-page-link img{display:block;width:100%;height:auto}
@@ -162,6 +163,7 @@ body{min-width:0}
 .flow-end{display:flex;justify-content:space-between;margin-top:35px}
 @media(max-width:900px){.flow-case-heading,.flow-pages,.flow-end{width:min(82vw,1360px)}}
 @media(max-width:650px){.works-page .masonry{grid-template-columns:1fr;gap:34px}.works-page .masonry-column:nth-child(2){padding-top:0}.works-page .project-caption{padding-top:11px}.works-page .project-open{opacity:1;transform:none}.flow-case{padding-top:116px;padding-bottom:70px}.flow-case-heading,.flow-pages,.flow-end{width:100%}.flow-case-heading{align-items:start;flex-direction:column;gap:13px;margin-bottom:28px}.flow-back{margin-bottom:17px}.flow-case-heading h1{font-size:58px}.flow-case-heading p{font-size:13px;margin-top:8px}.flow-sheet{padding-bottom:14px}.flow-end{margin-top:20px}}
+@media(max-width:650px){.flow-sheet.is-chapter-break{padding-bottom:48px}}
 
 /* Each letter rolls once on hover, as in the supplied navigation recording. */
 .main-nav a:hover{opacity:1}

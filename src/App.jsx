@@ -236,7 +236,7 @@ function FlowCase() {
   return <section className="flow-case page-gutter" id="top" aria-labelledby="flow-title">
     <div className="flow-case-heading"><div><LocalLink href="/works" className="flow-back">← &nbsp;All work</LocalLink><h1 id="flow-title">FLOW</h1><p>Finding balance in an inner rhythm.</p></div><a className="flow-download" href={flow.pdf} download="Xuanzhu-Zhao-FLOW.pdf">Download case study PDF<DownloadSimple size={17} weight="light" aria-hidden="true" /></a></div>
     <div className="flow-pages" aria-label="FLOW case study, 19 pages">
-      {flow.pages.map((page, index) => <div className="flow-sheet" key={page.src} style={{ backgroundColor: page.gapColor }}>
+      {flow.pages.map((page, index) => <div className={`flow-sheet${page.chapterBreakAfter ? ' is-chapter-break' : ''}`} key={page.src} style={{ backgroundColor: page.gapColor }}>
         <button className="flow-page-link" onClick={() => { setZoomed(false); setActivePage(index); }} aria-label={`View FLOW page ${index + 1} of ${flow.pages.length} at full size`}>
           <img src={page.src} width={page.width} height={page.height} alt={`FLOW case study page ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
         </button>

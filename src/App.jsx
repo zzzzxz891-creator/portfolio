@@ -146,7 +146,6 @@ function FeaturedCase() {
   return <section className={`featured-case page-gutter${project.pages.length ? ' has-case' : ''}`} id="work" aria-labelledby="work-title">
     <div className="section-heading featured-heading"><h2 id="work-title">Selected work</h2></div>
     {!project.pages.length && <div className="case-intro"><p className="eyebrow">01 / {project.subtitle}</p><h3>{project.title}</h3><p>{project.description}</p></div>}
-    {project.pages.length > 0 && <div className="case-reading-info"><h3>{project.title}</h3></div>}
     {project.pages.length > 0 && <CaseContents />}
     {project.pages.length ? <div className="case-pages" ref={container}>
       {pageGroups.map(group => <div className={`case-page${group.length > 1 ? ' is-joined' : ''}${[5, 8, 11, 12].includes(group[0].index + 1) ? ' is-chapter-start' : ''}`} key={group[0].page.src} data-page-group={group.map(item => item.index + 1).join('-')}>
@@ -190,7 +189,6 @@ function Home() {
       <div className="hero-copy"><h1 id="hero-title" aria-label="Xuanzhu Zhao"><span>Xuanzhu</span><span>Zhao</span></h1>
         <p>Interaction &amp; experience designer.<br />I turn complex ideas into clear, thoughtful experiences — through research, visual design, and prototyping.</p>
       </div>
-      <a className="scroll-cue" href="#work" aria-label="Scroll to selected work"><ArrowDown size={26} weight="thin" aria-hidden="true" /></a>
     </section>
     <FeaturedCase /><About />
   </>;

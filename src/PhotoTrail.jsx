@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import photoManifest from './photos.json';
 import { assetPath } from './site-paths.js';
 import { MOTION, sampleSegment, scaleAt, stampSpacing } from './trail-motion';
@@ -7,18 +7,12 @@ const photos = photoManifest.map(photo => ({ ...photo, src: assetPath(`/assets/p
 
 export function PhotoTrail() {
   const canvasRef = useRef(null);
-  const explore = useRef(null);
-  const [touchHint, setTouchHint] = useState(false);
   useEffect(() => {
     const canvas = canvasRef.current, hero = canvas.closest('.hero'), context = canvas.getContext('2d');
     if (!context) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const narrow = window.matchMedia('(max-width: 650px)');
-    const coarse = window.matchMedia('(pointer: coarse)');
-    const inputHint = () => setTouchHint(narrow.matches || coarse.matches);
-    inputHint(); narrow.addEventListener('change', inputHint); coarse.addEventListener('change', inputHint);
     let width=0, height=0, density=1, cardWidth=0, cardHeight=0, items=[], next=0, count=0;
-    let frame=0, lastInput=null, carried=0, pending=[], alive=true, demoTimers=[];
+    let frame=0, lastInput=null, carried=0, pending=[], alive=true;
     const images=photos.map(photo=>{const img=new Image();img.src=photo.src;return img;});
 
     const queuePaint=()=>{if(alive&&!frame)frame=requestAnimationFrame(paint);};
@@ -94,29 +88,12 @@ export function PhotoTrail() {
       queuePaint();
     };
     const tap=event=>{if(event.pointerType!=='touch'||event.target.closest('a,button'))return;const box=hero.getBoundingClientRect();spawn({x:event.clientX-box.left,y:event.clientY-box.top});};
-    const preview=()=>{
-      demoTimers.forEach(clearTimeout);resetInput();items=[];
-      // A continuous C-shaped gesture. It uses exactly the pointer renderer,
-      // scale curve and lifetime, rather than a separate demonstration effect.
-      const points=width<650?[[.2,.64],[.36,.65],[.52,.67],[.67,.69]]:Array.from({length:12},(_,i)=>{
-        const angle=(50+i*24)*Math.PI/180;
-        return [.29+.18*Math.cos(angle),.5+.28*Math.sin(angle)];
-      });
-      demoTimers=points.map(([x,y],i)=>setTimeout(()=>{
-        const point={x:width*x,y:height*y,at:performance.now()};
-        if(reduce.matches)spawn(point,point.at);
-        else {pending.push(point);queuePaint();}
-      },i*45));
-    };
-    explore.current=preview;
     hero.addEventListener('pointermove',move,{passive:true});hero.addEventListener('pointerleave',resetInput);hero.addEventListener('pointerdown',tap,{passive:true});
     const visibility=()=>{if(document.hidden){items=[];resetInput();queuePaint();}};document.addEventListener('visibilitychange',visibility);
     return()=>{
-      alive=false;cancelAnimationFrame(frame);demoTimers.forEach(clearTimeout);observer.disconnect();
-      narrow.removeEventListener('change',inputHint);coarse.removeEventListener('change',inputHint);
+      alive=false;cancelAnimationFrame(frame);observer.disconnect();
       hero.removeEventListener('pointermove',move);hero.removeEventListener('pointerleave',resetInput);hero.removeEventListener('pointerdown',tap);document.removeEventListener('visibilitychange',visibility);
     };
   },[]);
-  return <><canvas className="trail-layer" ref={canvasRef} aria-hidden="true" />
-    <button className="explore-cue" onClick={()=>explore.current?.()} aria-label="Explore the photo collection">{touchHint?'Tap to explore':'Move to explore'}</button></>;
+  return <canvas className="trail-layer" ref={canvasRef} aria-hidden="true" />;
 }

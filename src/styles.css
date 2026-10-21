@@ -181,11 +181,12 @@ html.flow-mode{background:#fffcf6;color:#26231e}
 .flow-case-heading p{color:#615d54}
 .flow-pages{width:100%;max-width:none}
 .flow-page-link{width:min(66vw,1360px);margin-inline:auto}
+.flow-sheet.is-wide .flow-page-link{width:min(var(--flow-wide-vw),var(--flow-wide-max),100%)}
 .flow-case-tail{background:#404040;color:#f7f7f5;padding:35px 0 110px}
 .flow-case-tail .flow-end{margin-top:0}
 .flow-case-tail .flow-end a{color:#ddd}
 .flow-mode .site-footer{background:#404040;color:#f7f7f5}
-@media(max-width:900px){.flow-page-link{width:min(82vw,1360px)}}
+@media(max-width:900px){.flow-page-link{width:min(82vw,1360px)}.flow-sheet.is-wide .flow-page-link{width:100%;max-width:var(--flow-wide-max)}}
 @media(max-width:650px){.flow-page-link{width:calc(100% - 40px)}.flow-case-tail{padding:20px 20px 70px}.flow-case-tail .flow-end{width:100%}}
 
 /* Each letter rolls once on hover, as in the supplied navigation recording. */

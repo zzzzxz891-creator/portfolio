@@ -227,6 +227,38 @@ function FlowCase() {
   const reader = useRef(null);
   const [activePage, setActivePage] = useState(null);
   const [zoomed, setZoomed] = useState(false);
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    const header = document.querySelector('.site-header');
+    const sheets = [...document.querySelectorAll('.flow-sheet')];
+    let frame = 0;
+    root.classList.add('flow-mode');
+    const updateTheme = () => {
+      frame = 0;
+      const headerBottom = header?.getBoundingClientRect().bottom ?? 86;
+      let color = flow.pages[0].gapColor;
+      for (let index = 0; index < sheets.length; index++) {
+        if (sheets[index].getBoundingClientRect().top > headerBottom) break;
+        color = flow.pages[index].gapColor;
+      }
+      root.style.setProperty('--flow-header-bg', color);
+      root.style.setProperty('--flow-header-fg', color === '#404040' ? '#f7f7f5' : '#26231e');
+    };
+    const scheduleTheme = () => {
+      if (!frame) frame = requestAnimationFrame(updateTheme);
+    };
+    updateTheme();
+    window.addEventListener('scroll', scheduleTheme, { passive: true });
+    window.addEventListener('resize', scheduleTheme);
+    return () => {
+      window.removeEventListener('scroll', scheduleTheme);
+      window.removeEventListener('resize', scheduleTheme);
+      if (frame) cancelAnimationFrame(frame);
+      root.classList.remove('flow-mode');
+      root.style.removeProperty('--flow-header-bg');
+      root.style.removeProperty('--flow-header-fg');
+    };
+  }, []);
   useEffect(() => {
     if (activePage === null) return;
     const previousOverflow = document.body.style.overflow;
@@ -243,7 +275,7 @@ function FlowCase() {
         </button>
       </div>)}
     </div>
-    <div className="flow-end"><LocalLink href="/works">← All work</LocalLink><a href={flow.pdf} download="Xuanzhu-Zhao-FLOW.pdf">Download PDF <DownloadSimple size={17} weight="light" aria-hidden="true" /></a></div>
+    <div className="flow-case-tail"><div className="flow-end"><LocalLink href="/works">← All work</LocalLink><a href={flow.pdf} download="Xuanzhu-Zhao-FLOW.pdf">Download PDF <DownloadSimple size={17} weight="light" aria-hidden="true" /></a></div></div>
     <dialog ref={reader} className="case-reader" aria-label="FLOW page reader" onClose={() => setActivePage(null)} onClick={event => { if (event.target === event.currentTarget) reader.current?.close(); }}>
       {activePage !== null && <div className="case-reader-content"><div className="case-reader-toolbar"><span>FLOW · Page {String(activePage + 1).padStart(2, '0')} / {flow.pages.length}</span><div><button className="reader-zoom" aria-pressed={zoomed} onClick={() => setZoomed(value => !value)}>{zoomed ? 'Fit width' : 'Zoom in'}</button><button className="reader-close" onClick={() => reader.current?.close()} aria-label="Close page reader"><X size={22} weight="light" /></button></div></div>
         <div className={`case-reader-scroll${zoomed ? ' is-zoomed' : ''}`} tabIndex={0} aria-label="Scrollable full-size image"><img src={flow.pages[activePage].src} width={flow.pages[activePage].width} height={flow.pages[activePage].height} alt={`FLOW case study page ${activePage + 1}`} style={zoomed ? { width: Math.min(flow.pages[activePage].width, Math.max(1400, Math.min(1720, window.innerWidth - 32) * 1.7)) } : undefined} /></div></div>}

@@ -8,76 +8,76 @@
     "expectedPageCount": 29,
     "pages": [
       {
-        "src": "/assets/projects/paths/01-1600.webp?v=10b3eaf1f558",
-        "srcSet": "/assets/projects/paths/01-1600.webp?v=10b3eaf1f558 1600w, /assets/projects/paths/01-2400.webp?v=10b3eaf1f558 2400w, /assets/projects/paths/01.png?v=10b3eaf1f558 3840w",
-        "original": "/assets/projects/paths/01.png?v=10b3eaf1f558",
+        "src": "/assets/projects/paths/01-1600.webp?v=e81cf1ded2cf",
+        "srcSet": "/assets/projects/paths/01-1600.webp?v=e81cf1ded2cf 1600w, /assets/projects/paths/01-2400.webp?v=e81cf1ded2cf 2400w, /assets/projects/paths/01.png?v=e81cf1ded2cf 3840w",
+        "original": "/assets/projects/paths/01.png?v=e81cf1ded2cf",
         "width": 3840,
         "height": 2400,
         "alt": "Paths travel redesign — page 01: Cover. Original case study in Chinese.",
-        "sourceSha256": "10b3eaf1f558fc516372c0335ec5fc6cf8aefc5e4fbd4ba2662d0c54c9448a1f"
+        "sourceSha256": "e81cf1ded2cf68e1a6c5e4f02d2d666bddac9cd4f4257c963fb2a894e3b6de0a"
       },
       {
-        "src": "/assets/projects/paths/02-1600.webp?v=b2920eaf6d63",
-        "srcSet": "/assets/projects/paths/02-1600.webp?v=b2920eaf6d63 1600w, /assets/projects/paths/02-2400.webp?v=b2920eaf6d63 2400w, /assets/projects/paths/02.png?v=b2920eaf6d63 3840w",
-        "original": "/assets/projects/paths/02.png?v=b2920eaf6d63",
+        "src": "/assets/projects/paths/02-1600.webp?v=4b60de8f7da1",
+        "srcSet": "/assets/projects/paths/02-1600.webp?v=4b60de8f7da1 1600w, /assets/projects/paths/02-2400.webp?v=4b60de8f7da1 2400w, /assets/projects/paths/02.png?v=4b60de8f7da1 3840w",
+        "original": "/assets/projects/paths/02.png?v=4b60de8f7da1",
         "width": 3840,
         "height": 2858,
         "alt": "Paths travel redesign — page 02: Project background and redesign goals. Original case study in Chinese.",
-        "sourceSha256": "b2920eaf6d63a09cc99458f716383ec5a93a01406f5146f0217828130c341f54"
+        "sourceSha256": "4b60de8f7da16cd96c8bdb8c42cfb705748d6c63b407141a0118a1460fc7ee35"
       },
       {
-        "src": "/assets/projects/paths/03-1600.webp?v=6fd1dc99b0f6",
-        "srcSet": "/assets/projects/paths/03-1600.webp?v=6fd1dc99b0f6 1600w, /assets/projects/paths/03-2400.webp?v=6fd1dc99b0f6 2400w, /assets/projects/paths/03.png?v=6fd1dc99b0f6 3840w",
-        "original": "/assets/projects/paths/03.png?v=6fd1dc99b0f6",
+        "src": "/assets/projects/paths/03-1600.webp?v=85f4f2d1427d",
+        "srcSet": "/assets/projects/paths/03-1600.webp?v=85f4f2d1427d 1600w, /assets/projects/paths/03-2400.webp?v=85f4f2d1427d 2400w, /assets/projects/paths/03.png?v=85f4f2d1427d 3840w",
+        "original": "/assets/projects/paths/03.png?v=85f4f2d1427d",
         "width": 3840,
         "height": 5206,
         "alt": "Paths travel redesign — page 03: Design process and product analysis. Original case study in Chinese.",
-        "sourceSha256": "6fd1dc99b0f657a76d8af7724071ac6dc80a1f736fd92a3904abb7ea7fc2ba6e"
+        "sourceSha256": "85f4f2d1427d59c60d25dff8cdb37ec30695e4cf7b31d4b7e99d340f91bd4d6d"
       },
       {
-        "src": "/assets/projects/paths/04-1600.webp?v=834030c7fd8b",
-        "srcSet": "/assets/projects/paths/04-1600.webp?v=834030c7fd8b 1600w, /assets/projects/paths/04-2400.webp?v=834030c7fd8b 2400w, /assets/projects/paths/04.png?v=834030c7fd8b 3840w",
-        "original": "/assets/projects/paths/04.png?v=834030c7fd8b",
+        "src": "/assets/projects/paths/04-1600.webp?v=d0224a890317",
+        "srcSet": "/assets/projects/paths/04-1600.webp?v=d0224a890317 1600w, /assets/projects/paths/04-2400.webp?v=d0224a890317 2400w, /assets/projects/paths/04.png?v=d0224a890317 3840w",
+        "original": "/assets/projects/paths/04.png?v=d0224a890317",
         "width": 3840,
         "height": 5332,
         "alt": "Paths travel redesign — page 04: Product structure and core task flows. Original case study in Chinese.",
-        "sourceSha256": "834030c7fd8b170f3eb3344d11e0f421a0a729c4e8c830f1f641a1c86290db54"
+        "sourceSha256": "d0224a890317fe633ff8f5548055c29715d7f7b23d0d4b852da03b09f545c3f1"
       },
       {
-        "src": "/assets/projects/paths/05-1600.webp?v=92ef76eb1bf6",
-        "srcSet": "/assets/projects/paths/05-1600.webp?v=92ef76eb1bf6 1600w, /assets/projects/paths/05-2400.webp?v=92ef76eb1bf6 2400w, /assets/projects/paths/05.png?v=92ef76eb1bf6 3840w",
-        "original": "/assets/projects/paths/05.png?v=92ef76eb1bf6",
+        "src": "/assets/projects/paths/05-1600.webp?v=74dde59055b2",
+        "srcSet": "/assets/projects/paths/05-1600.webp?v=74dde59055b2 1600w, /assets/projects/paths/05-2400.webp?v=74dde59055b2 2400w, /assets/projects/paths/05.png?v=74dde59055b2 3840w",
+        "original": "/assets/projects/paths/05.png?v=74dde59055b2",
         "width": 3840,
-        "height": 5408,
+        "height": 5296,
         "alt": "Paths travel redesign — page 05: User research. Original case study in Chinese.",
-        "sourceSha256": "92ef76eb1bf6dc644c67821f3124e0a04f377825648038d302c6a7c0647b88c1"
+        "sourceSha256": "74dde59055b2b5b9f4b5f136eb34a07a415380749198222368ad04f94dace355"
       },
       {
-        "src": "/assets/projects/paths/06-1600.webp?v=b15ffd546e86",
-        "srcSet": "/assets/projects/paths/06-1600.webp?v=b15ffd546e86 1600w, /assets/projects/paths/06-2400.webp?v=b15ffd546e86 2400w, /assets/projects/paths/06.png?v=b15ffd546e86 3840w",
-        "original": "/assets/projects/paths/06.png?v=b15ffd546e86",
+        "src": "/assets/projects/paths/06-1600.webp?v=4c3e08f138fb",
+        "srcSet": "/assets/projects/paths/06-1600.webp?v=4c3e08f138fb 1600w, /assets/projects/paths/06-2400.webp?v=4c3e08f138fb 2400w, /assets/projects/paths/06.png?v=4c3e08f138fb 3840w",
+        "original": "/assets/projects/paths/06.png?v=4c3e08f138fb",
         "width": 3840,
-        "height": 2396,
+        "height": 2504,
         "alt": "Paths travel redesign — page 06: User persona: independent traveller. Original case study in Chinese.",
-        "sourceSha256": "b15ffd546e86b08d69812a808d33bb487d41c29745cb925aa60c844178921a2a"
+        "sourceSha256": "4c3e08f138fbc02a40b8c08b7c3f0a8e2392f9350150fd234d581df00c10122e"
       },
       {
-        "src": "/assets/projects/paths/07-1600.webp?v=62faa0026ecd",
-        "srcSet": "/assets/projects/paths/07-1600.webp?v=62faa0026ecd 1600w, /assets/projects/paths/07-2400.webp?v=62faa0026ecd 2400w, /assets/projects/paths/07.png?v=62faa0026ecd 3840w",
-        "original": "/assets/projects/paths/07.png?v=62faa0026ecd",
+        "src": "/assets/projects/paths/07-1600.webp?v=ec05ca6adecc",
+        "srcSet": "/assets/projects/paths/07-1600.webp?v=ec05ca6adecc 1600w, /assets/projects/paths/07-2400.webp?v=ec05ca6adecc 2400w, /assets/projects/paths/07.png?v=ec05ca6adecc 3840w",
+        "original": "/assets/projects/paths/07.png?v=ec05ca6adecc",
         "width": 3840,
         "height": 2160,
         "alt": "Paths travel redesign — page 07: User persona: trip organiser. Original case study in Chinese.",
-        "sourceSha256": "62faa0026ecde07d0a5c85f6fc16d2e48a4eefc8f29d4def9b8404ae7cecd9cf"
+        "sourceSha256": "ec05ca6adeccde0f01c4ac3cda38c53415bed6b38b631d48cdd8c21e4ce7dab3"
       },
       {
-        "src": "/assets/projects/paths/08-1600.webp?v=3c44d51edd66",
-        "srcSet": "/assets/projects/paths/08-1600.webp?v=3c44d51edd66 1600w, /assets/projects/paths/08-2400.webp?v=3c44d51edd66 2400w, /assets/projects/paths/08.png?v=3c44d51edd66 3840w",
-        "original": "/assets/projects/paths/08.png?v=3c44d51edd66",
+        "src": "/assets/projects/paths/08-1600.webp?v=17629b2f4587",
+        "srcSet": "/assets/projects/paths/08-1600.webp?v=17629b2f4587 1600w, /assets/projects/paths/08-2400.webp?v=17629b2f4587 2400w, /assets/projects/paths/08.png?v=17629b2f4587 3840w",
+        "original": "/assets/projects/paths/08.png?v=17629b2f4587",
         "width": 3840,
         "height": 2160,
         "alt": "Paths travel redesign — page 08: Competitive analysis. Original case study in Chinese.",
-        "sourceSha256": "3c44d51edd66a3f0d4956c02cd415e7b7ca79c105fa14faed7396857b82004d9"
+        "sourceSha256": "17629b2f458705060a18031a4e54e54ebe8551044ceacbf9f1a9a93c5f352bbf"
       },
       {
         "src": "/assets/projects/paths/09-1600.webp?v=3500ee062565",
@@ -125,67 +125,67 @@
         "sourceSha256": "749a9f015a4cdb297eb7a6032c0914fd3d370ad0fc682f97b872d6400ae1a398"
       },
       {
-        "src": "/assets/projects/paths/14-1600.webp?v=3b323103d9b2",
-        "srcSet": "/assets/projects/paths/14-1600.webp?v=3b323103d9b2 1600w, /assets/projects/paths/14-2400.webp?v=3b323103d9b2 2400w, /assets/projects/paths/14.png?v=3b323103d9b2 3840w",
-        "original": "/assets/projects/paths/14.png?v=3b323103d9b2",
+        "src": "/assets/projects/paths/14-1600.webp?v=799f458da36e",
+        "srcSet": "/assets/projects/paths/14-1600.webp?v=799f458da36e 1600w, /assets/projects/paths/14-2400.webp?v=799f458da36e 2400w, /assets/projects/paths/14.png?v=799f458da36e 3840w",
+        "original": "/assets/projects/paths/14.png?v=799f458da36e",
         "width": 3840,
         "height": 2160,
         "alt": "Paths travel redesign — page 14: Icons and visual assets. Original case study in Chinese.",
-        "sourceSha256": "3b323103d9b2213b2039d22858694ebb81bddb006aab304814dd5fccd882106d"
+        "sourceSha256": "799f458da36e5195825a4303f2f7a43b04ee1081dcd521157357d75113d6dd82"
       },
       {
-        "src": "/assets/projects/paths/15-1600.webp?v=f39e0c89cae3",
-        "srcSet": "/assets/projects/paths/15-1600.webp?v=f39e0c89cae3 1600w, /assets/projects/paths/15-2400.webp?v=f39e0c89cae3 2400w, /assets/projects/paths/15.png?v=f39e0c89cae3 3840w",
-        "original": "/assets/projects/paths/15.png?v=f39e0c89cae3",
+        "src": "/assets/projects/paths/15-1600.webp?v=4325e894367a",
+        "srcSet": "/assets/projects/paths/15-1600.webp?v=4325e894367a 1600w, /assets/projects/paths/15-2400.webp?v=4325e894367a 2400w, /assets/projects/paths/15.png?v=4325e894367a 3840w",
+        "original": "/assets/projects/paths/15.png?v=4325e894367a",
         "width": 3840,
         "height": 3676,
         "alt": "Paths travel redesign — page 15: Adaptive home-screen states. Original case study in Chinese.",
-        "sourceSha256": "f39e0c89cae356cccf5331457140da4d0b6e9c0333cfbb9dca96704511317cb2"
+        "sourceSha256": "4325e894367ad509b44e16bff9823772df1f48612ac5439e17b1936f09d92b92"
       },
       {
-        "src": "/assets/projects/paths/16-1600.webp?v=393aca93e29d",
-        "srcSet": "/assets/projects/paths/16-1600.webp?v=393aca93e29d 1600w, /assets/projects/paths/16-2400.webp?v=393aca93e29d 2400w, /assets/projects/paths/16.png?v=393aca93e29d 3840w",
-        "original": "/assets/projects/paths/16.png?v=393aca93e29d",
+        "src": "/assets/projects/paths/16-1600.webp?v=f24facd56080",
+        "srcSet": "/assets/projects/paths/16-1600.webp?v=f24facd56080 1600w, /assets/projects/paths/16-2400.webp?v=f24facd56080 2400w, /assets/projects/paths/16.png?v=f24facd56080 3840w",
+        "original": "/assets/projects/paths/16.png?v=f24facd56080",
         "width": 3840,
         "height": 2628,
         "alt": "Paths travel redesign — page 16: Itinerary overview and information hierarchy. Original case study in Chinese.",
-        "sourceSha256": "393aca93e29d0c0233b355f813af53b165e3f678440c74882c0f1089783491cf"
+        "sourceSha256": "f24facd56080f24b920a1cd5f1281bdb53c2f4d1272c9336fea783d10ef38ffe"
       },
       {
-        "src": "/assets/projects/paths/17-1600.webp?v=6109e80f6f0c",
-        "srcSet": "/assets/projects/paths/17-1600.webp?v=6109e80f6f0c 1600w, /assets/projects/paths/17-2400.webp?v=6109e80f6f0c 2400w, /assets/projects/paths/17.png?v=6109e80f6f0c 3840w",
-        "original": "/assets/projects/paths/17.png?v=6109e80f6f0c",
+        "src": "/assets/projects/paths/17-1600.webp?v=8103fbfbbc7e",
+        "srcSet": "/assets/projects/paths/17-1600.webp?v=8103fbfbbc7e 1600w, /assets/projects/paths/17-2400.webp?v=8103fbfbbc7e 2400w, /assets/projects/paths/17.png?v=8103fbfbbc7e 3840w",
+        "original": "/assets/projects/paths/17.png?v=8103fbfbbc7e",
         "width": 3840,
-        "height": 2922,
+        "height": 2756,
         "alt": "Paths travel redesign — page 17: Multi-plan management. Original case study in Chinese.",
-        "sourceSha256": "6109e80f6f0c6b1427687798d29a032ca338aadb2964d15dc0f3a1e4e8e7a3eb"
+        "sourceSha256": "8103fbfbbc7ecf58955db938b4b694de7d6dd0426de4953c1398353e73d12733"
       },
       {
-        "src": "/assets/projects/paths/18-1600.webp?v=7cd117400008",
-        "srcSet": "/assets/projects/paths/18-1600.webp?v=7cd117400008 1600w, /assets/projects/paths/18-2400.webp?v=7cd117400008 2400w, /assets/projects/paths/18.png?v=7cd117400008 3840w",
-        "original": "/assets/projects/paths/18.png?v=7cd117400008",
+        "src": "/assets/projects/paths/18-1600.webp?v=6cf1dc5a4372",
+        "srcSet": "/assets/projects/paths/18-1600.webp?v=6cf1dc5a4372 1600w, /assets/projects/paths/18-2400.webp?v=6cf1dc5a4372 2400w, /assets/projects/paths/18.png?v=6cf1dc5a4372 3840w",
+        "original": "/assets/projects/paths/18.png?v=6cf1dc5a4372",
         "width": 3840,
         "height": 3634,
         "alt": "Paths travel redesign — page 18: Create an itinerary. Original case study in Chinese.",
-        "sourceSha256": "7cd1174000083e45ecf607d42b86b7525bed159713398a0862c18b5a2b1110f8"
+        "sourceSha256": "6cf1dc5a437288291c2541caf6228c2d7bf6eef5571cf4bf75d7749fd2b4bd16"
       },
       {
-        "src": "/assets/projects/paths/19-1600.webp?v=1c770191b301",
-        "srcSet": "/assets/projects/paths/19-1600.webp?v=1c770191b301 1600w, /assets/projects/paths/19-2400.webp?v=1c770191b301 2400w, /assets/projects/paths/19.png?v=1c770191b301 3840w",
-        "original": "/assets/projects/paths/19.png?v=1c770191b301",
+        "src": "/assets/projects/paths/19-1600.webp?v=73726a3b1dc1",
+        "srcSet": "/assets/projects/paths/19-1600.webp?v=73726a3b1dc1 1600w, /assets/projects/paths/19-2400.webp?v=73726a3b1dc1 2400w, /assets/projects/paths/19.png?v=73726a3b1dc1 3840w",
+        "original": "/assets/projects/paths/19.png?v=73726a3b1dc1",
         "width": 3840,
         "height": 2744,
         "alt": "Paths travel redesign — page 19: Create with locked places. Original case study in Chinese.",
-        "sourceSha256": "1c770191b3018da7f06dd554f9fd5f64bb67a865f094f64259296311b183ec42"
+        "sourceSha256": "73726a3b1dc104ffde379e6157f03439c1acc711b1a2c5fb41dd323d05f1edba"
       },
       {
-        "src": "/assets/projects/paths/20-1600.webp?v=12de77e318b8",
-        "srcSet": "/assets/projects/paths/20-1600.webp?v=12de77e318b8 1600w, /assets/projects/paths/20-2400.webp?v=12de77e318b8 2400w, /assets/projects/paths/20.png?v=12de77e318b8 3840w",
-        "original": "/assets/projects/paths/20.png?v=12de77e318b8",
+        "src": "/assets/projects/paths/20-1600.webp?v=7ec4ffdfacbc",
+        "srcSet": "/assets/projects/paths/20-1600.webp?v=7ec4ffdfacbc 1600w, /assets/projects/paths/20-2400.webp?v=7ec4ffdfacbc 2400w, /assets/projects/paths/20.png?v=7ec4ffdfacbc 3840w",
+        "original": "/assets/projects/paths/20.png?v=7ec4ffdfacbc",
         "width": 3840,
-        "height": 3648,
+        "height": 3728,
         "alt": "Paths travel redesign — page 20: Edit an existing itinerary. Original case study in Chinese.",
-        "sourceSha256": "12de77e318b86ccd373d48ac230d5c481e69677c2ed867605569aeda0346d912"
+        "sourceSha256": "7ec4ffdfacbcb5a3d5fd8a3431a0f28421f6eee6cf5a7a7d3d3892b5745a2138"
       },
       {
         "src": "/assets/projects/paths/21-1600.webp?v=9dca5a0dce9c",
@@ -197,13 +197,13 @@
         "sourceSha256": "9dca5a0dce9c3c8792a817fb2a6aaf4c4d5d74c29ea06c4bd41e495369d895ed"
       },
       {
-        "src": "/assets/projects/paths/22-1600.webp?v=1f40998c415e",
-        "srcSet": "/assets/projects/paths/22-1600.webp?v=1f40998c415e 1600w, /assets/projects/paths/22-2400.webp?v=1f40998c415e 2400w, /assets/projects/paths/22.png?v=1f40998c415e 3840w",
-        "original": "/assets/projects/paths/22.png?v=1f40998c415e",
+        "src": "/assets/projects/paths/22-1600.webp?v=04c7ef2badd6",
+        "srcSet": "/assets/projects/paths/22-1600.webp?v=04c7ef2badd6 1600w, /assets/projects/paths/22-2400.webp?v=04c7ef2badd6 2400w, /assets/projects/paths/22.png?v=04c7ef2badd6 3840w",
+        "original": "/assets/projects/paths/22.png?v=04c7ef2badd6",
         "width": 3840,
         "height": 3036,
         "alt": "Paths travel redesign — page 22: Planning and update feedback. Original case study in Chinese.",
-        "sourceSha256": "1f40998c415e91e3a26a959dc77a3819581cb3bd27cbcc354272cd52d5cfe2ae"
+        "sourceSha256": "04c7ef2badd620bdc7d44df04d2211bf2da3501eebce7742d9e31a208a977cda"
       },
       {
         "src": "/assets/projects/paths/23-1600.webp?v=0e9a5af853b7",
@@ -215,40 +215,40 @@
         "sourceSha256": "0e9a5af853b7b1c6ac8fcb3529d772b2c961fbe193f35b078aab832420a1a8a8"
       },
       {
-        "src": "/assets/projects/paths/24-1600.webp?v=8b28e6a7fb49",
-        "srcSet": "/assets/projects/paths/24-1600.webp?v=8b28e6a7fb49 1600w, /assets/projects/paths/24-2400.webp?v=8b28e6a7fb49 2400w, /assets/projects/paths/24.png?v=8b28e6a7fb49 3840w",
-        "original": "/assets/projects/paths/24.png?v=8b28e6a7fb49",
+        "src": "/assets/projects/paths/24-1600.webp?v=8cd6d87ccce6",
+        "srcSet": "/assets/projects/paths/24-1600.webp?v=8cd6d87ccce6 1600w, /assets/projects/paths/24-2400.webp?v=8cd6d87ccce6 2400w, /assets/projects/paths/24.png?v=8cd6d87ccce6 3840w",
+        "original": "/assets/projects/paths/24.png?v=8cd6d87ccce6",
         "width": 3840,
         "height": 2946,
         "alt": "Paths travel redesign — page 24: Edit a past trip. Original case study in Chinese.",
-        "sourceSha256": "8b28e6a7fb496fba04c0bc43dd3792f2023ef8510d459348d92bc2114a2b1453"
+        "sourceSha256": "8cd6d87ccce607a6a34c9db697a030f92866c9ee2f6adfc60714a5cf77ef8213"
       },
       {
-        "src": "/assets/projects/paths/25-1600.webp?v=a37fdceba877",
-        "srcSet": "/assets/projects/paths/25-1600.webp?v=a37fdceba877 1600w, /assets/projects/paths/25-2400.webp?v=a37fdceba877 2400w, /assets/projects/paths/25.png?v=a37fdceba877 3840w",
-        "original": "/assets/projects/paths/25.png?v=a37fdceba877",
+        "src": "/assets/projects/paths/25-1600.webp?v=2aa9f922472a",
+        "srcSet": "/assets/projects/paths/25-1600.webp?v=2aa9f922472a 1600w, /assets/projects/paths/25-2400.webp?v=2aa9f922472a 2400w, /assets/projects/paths/25.png?v=2aa9f922472a 3840w",
+        "original": "/assets/projects/paths/25.png?v=2aa9f922472a",
         "width": 3840,
         "height": 2784,
         "alt": "Paths travel redesign — page 25: Find and save places. Original case study in Chinese.",
-        "sourceSha256": "a37fdceba87714acc796b57c2b1fb1341935705e77873d2262ab45b18bcb3533"
+        "sourceSha256": "2aa9f922472a2c866b073a7686c797f5adda97da22a1148f46cc95608ff2ef0c"
       },
       {
-        "src": "/assets/projects/paths/26-1600.webp?v=ba5b35266d3c",
-        "srcSet": "/assets/projects/paths/26-1600.webp?v=ba5b35266d3c 1600w, /assets/projects/paths/26-2400.webp?v=ba5b35266d3c 2400w, /assets/projects/paths/26.png?v=ba5b35266d3c 3840w",
-        "original": "/assets/projects/paths/26.png?v=ba5b35266d3c",
+        "src": "/assets/projects/paths/26-1600.webp?v=cce6b99f710b",
+        "srcSet": "/assets/projects/paths/26-1600.webp?v=cce6b99f710b 1600w, /assets/projects/paths/26-2400.webp?v=cce6b99f710b 2400w, /assets/projects/paths/26.png?v=cce6b99f710b 3840w",
+        "original": "/assets/projects/paths/26.png?v=cce6b99f710b",
         "width": 3840,
         "height": 2538,
         "alt": "Paths travel redesign — page 26: Navigate to the starting point. Original case study in Chinese.",
-        "sourceSha256": "ba5b35266d3cb148c3582c35838295ed51254a0d021cde856f7d4355ad97a86f"
+        "sourceSha256": "cce6b99f710b5de3a4f2ad42113089263a971898308bc834655bd82d2bf64fee"
       },
       {
-        "src": "/assets/projects/paths/27-1600.webp?v=d2a6579c625b",
-        "srcSet": "/assets/projects/paths/27-1600.webp?v=d2a6579c625b 1600w, /assets/projects/paths/27-2400.webp?v=d2a6579c625b 2400w, /assets/projects/paths/27.png?v=d2a6579c625b 3840w",
-        "original": "/assets/projects/paths/27.png?v=d2a6579c625b",
+        "src": "/assets/projects/paths/27-1600.webp?v=66dd6f33598b",
+        "srcSet": "/assets/projects/paths/27-1600.webp?v=66dd6f33598b 1600w, /assets/projects/paths/27-2400.webp?v=66dd6f33598b 2400w, /assets/projects/paths/27.png?v=66dd6f33598b 3840w",
+        "original": "/assets/projects/paths/27.png?v=66dd6f33598b",
         "width": 3840,
         "height": 3074,
         "alt": "Paths travel redesign — page 27: On-trip overview. Original case study in Chinese.",
-        "sourceSha256": "d2a6579c625b208f422f4eba7e849ede80d2f4f7a612792a5e889d03af322994"
+        "sourceSha256": "66dd6f33598bde7d975af5ef248a276cb68667770d91dcd98efea80ca85d8db4"
       },
       {
         "src": "/assets/projects/paths/28-1600.webp?v=9f82d7c9ccc6",
@@ -261,13 +261,13 @@
         "joinPrevious": true
       },
       {
-        "src": "/assets/projects/paths/29-1600.webp?v=c92a65e2d758",
-        "srcSet": "/assets/projects/paths/29-1600.webp?v=c92a65e2d758 1600w, /assets/projects/paths/29-2400.webp?v=c92a65e2d758 2400w, /assets/projects/paths/29.png?v=c92a65e2d758 3840w",
-        "original": "/assets/projects/paths/29.png?v=c92a65e2d758",
+        "src": "/assets/projects/paths/29-1600.webp?v=931c39ec240f",
+        "srcSet": "/assets/projects/paths/29-1600.webp?v=931c39ec240f 1600w, /assets/projects/paths/29-2400.webp?v=931c39ec240f 2400w, /assets/projects/paths/29.png?v=931c39ec240f 3840w",
+        "original": "/assets/projects/paths/29.png?v=931c39ec240f",
         "width": 3840,
-        "height": 2326,
+        "height": 2682,
         "alt": "Paths travel redesign — page 29: Reflection and future improvements. Original case study in Chinese.",
-        "sourceSha256": "c92a65e2d758346e0dddcec796239e4e24f1159fdd454675b31f359f8719543c"
+        "sourceSha256": "931c39ec240fe7daad1c79883f2e21be93885024d63eb1c8bd0a1846031af20c"
       }
     ]
   }

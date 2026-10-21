@@ -2,7 +2,7 @@ import { assetData } from './site-paths.js';
 export const projects = assetData([
   {
     id: 'travel', title: 'Travel, reconsidered', subtitle: 'AI travel planning · Personal project',
-    image: '/assets/projects/paths/01-1600.webp', imageAlt: 'Cover of the Paths travel redesign case study', href: '/#work',
+    image: '/assets/projects/paths/01-1600.webp?v=e81cf1ded2cf', imageAlt: 'Cover of the Paths travel redesign case study', href: '/#work',
     date: 'Aug — Sep 2026', role: 'Interaction & experience design',
     introduction: 'Making AI-assisted travel planning easier to understand, adjust, and revisit.',
     details: [

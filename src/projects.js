@@ -2,7 +2,7 @@ import { assetData } from './site-paths.js';
 export const projects = assetData([
   {
     id: 'travel', title: 'Travel, reconsidered', subtitle: 'AI travel planning · Personal project',
-    image: '/assets/covers/travel-cover.webp', imageAlt: 'Illustrative cover: orange editorial publication on textured stone',
+    image: '/assets/projects/paths/01-1600.webp', imageAlt: 'Cover of the Paths travel redesign case study', href: '/#work',
     date: 'Aug — Sep 2026', role: 'Interaction & experience design',
     introduction: 'Making AI-assisted travel planning easier to understand, adjust, and revisit.',
     details: [
@@ -13,7 +13,7 @@ export const projects = assetData([
   },
   {
     id: 'flow', title: 'FLOW', subtitle: 'Emotion & interaction · Course project',
-    image: '/assets/covers/flow-cover.webp', imageAlt: 'Illustrative cover: folded monochrome architectural poster',
+    image: '/assets/projects/flow/01.png', imageAlt: 'Cover of the FLOW case study', href: '/works/flow',
     date: 'Dec 2025 — Jan 2026', role: 'Experience design & motion prototyping',
     introduction: 'Translating ideas from Chinese aesthetics into an experience for recording and sharing emotions.',
     details: [

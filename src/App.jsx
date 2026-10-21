@@ -2,9 +2,11 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUp, ArrowUpRight, DownloadSimple, X } from '@phosphor-icons/react';
 import { PhotoTrail } from './PhotoTrail.jsx';
 import { projects } from './projects.js';
+import rawFlow from './flow-pages.json';
 import rawContent from './content.json';
 import { sitePath, assetData, appRoute } from './site-paths.js';
 const content = assetData(rawContent);
+const flow = assetData(rawFlow);
 
 const caseChapters = [
   { id: 'case-product-review', page: 3, label: 'Product audit', offset: '37.5%' },
@@ -194,26 +196,55 @@ function Home() {
   </>;
 }
 
-function ProjectCard({ project, onOpen }) {
-  return <button className={`project project-${project.id}`} onClick={() => onOpen(project)} aria-label={`View ${project.title} overview`}>
+function ProjectCard({ project }) {
+  return <LocalLink className={`project project-${project.id}`} href={project.href} aria-label={`View ${project.title} case study`}>
     <img src={project.image} alt={project.imageAlt} loading="lazy" decoding="async" />
     <span className="project-caption"><span className="project-title">{project.title}</span><span className="project-subtitle">{project.subtitle}</span></span>
     <span className="project-open"><ArrowUpRight size={24} weight="light" aria-hidden="true" /></span>
-  </button>;
+  </LocalLink>;
 }
 
-function Works({ onOpen }) {
+function Works() {
   return <section className="works-page page-gutter" id="top" aria-labelledby="works-page-title">
-    <div className="works-page-heading"><h1 id="works-page-title">Work</h1><p>Selected projects / 04</p></div>
-    <p className="works-preview-label">Preview covers — project visuals coming soon</p>
-    <div className="masonry"><div className="masonry-column"><ProjectCard project={projects[0]} onOpen={onOpen} /><ProjectCard project={projects[2]} onOpen={onOpen} /></div>
-      <div className="masonry-column"><ProjectCard project={projects[1]} onOpen={onOpen} /><ProjectCard project={projects[3]} onOpen={onOpen} /></div></div>
+    <div className="works-page-heading"><h1 id="works-page-title">Work</h1><p>Selected projects / 02</p></div>
+    <div className="masonry"><div className="masonry-column"><ProjectCard project={projects[0]} /></div>
+      <div className="masonry-column"><ProjectCard project={projects[1]} /></div></div>
+  </section>;
+}
+
+function FlowCase() {
+  const reader = useRef(null);
+  const [activePage, setActivePage] = useState(null);
+  const [zoomed, setZoomed] = useState(false);
+  useEffect(() => {
+    if (activePage === null) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    reader.current?.showModal();
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [activePage]);
+  return <section className="flow-case page-gutter" id="top" aria-labelledby="flow-title">
+    <div className="flow-case-heading"><div><LocalLink href="/works" className="flow-back">← &nbsp;All work</LocalLink><h1 id="flow-title">FLOW</h1><p>Finding balance in an inner rhythm.</p></div><a className="flow-download" href={flow.pdf} download="Xuanzhu-Zhao-FLOW.pdf">Download case study PDF<DownloadSimple size={17} weight="light" aria-hidden="true" /></a></div>
+    <div className="flow-pages" aria-label="FLOW case study, 19 pages">
+      {flow.pages.map((page, index) => <div className="flow-sheet" key={page.src} style={{ backgroundColor: page.gapColor }}>
+        <button className="flow-page-link" onClick={() => { setZoomed(false); setActivePage(index); }} aria-label={`View FLOW page ${index + 1} of ${flow.pages.length} at full size`}>
+          <img src={page.src} width={page.width} height={page.height} alt={`FLOW case study page ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+        </button>
+      </div>)}
+    </div>
+    <div className="flow-end"><LocalLink href="/works">← All work</LocalLink><a href={flow.pdf} download="Xuanzhu-Zhao-FLOW.pdf">Download PDF <DownloadSimple size={17} weight="light" aria-hidden="true" /></a></div>
+    <dialog ref={reader} className="case-reader" aria-label="FLOW page reader" onClose={() => setActivePage(null)} onClick={event => { if (event.target === event.currentTarget) reader.current?.close(); }}>
+      {activePage !== null && <div className="case-reader-content"><div className="case-reader-toolbar"><span>FLOW · Page {String(activePage + 1).padStart(2, '0')} / {flow.pages.length}</span><div><button className="reader-zoom" aria-pressed={zoomed} onClick={() => setZoomed(value => !value)}>{zoomed ? 'Fit width' : 'Zoom in'}</button><button className="reader-close" onClick={() => reader.current?.close()} aria-label="Close page reader"><X size={22} weight="light" /></button></div></div>
+        <div className={`case-reader-scroll${zoomed ? ' is-zoomed' : ''}`} tabIndex={0} aria-label="Scrollable full-size image"><img src={flow.pages[activePage].src} width={flow.pages[activePage].width} height={flow.pages[activePage].height} alt={`FLOW case study page ${activePage + 1}`} style={zoomed ? { width: Math.min(flow.pages[activePage].width, Math.max(1400, Math.min(1720, window.innerWidth - 32) * 1.7)) } : undefined} /></div></div>}
+    </dialog>
   </section>;
 }
 
 export function App() {
   const [route, setRoute] = useState(() => appRoute(window.location.pathname, window.location.hash));
-  const worksPage = route.split('#')[0].replace(/\/+$/, '') === '/works';
+  const cleanRoute = route.split('#')[0].replace(/\/+$/, '');
+  const worksPage = cleanRoute === '/works';
+  const flowPage = cleanRoute === '/works/flow';
   const [project, setProject] = useState(null);
   const dialog = useRef(null);
   useEffect(() => {
@@ -235,9 +266,9 @@ export function App() {
   useEffect(() => { document.title = 'ZXZ | portfolio'; }, [worksPage]);
   useEffect(() => { if (project) dialog.current?.showModal(); document.body.style.overflow = project ? 'hidden' : ''; return () => { document.body.style.overflow = ''; }; }, [project]);
   return <>
-    <a className="skip-link" href={worksPage ? '#works-page-title' : '#work'}>Skip to selected work</a>
-    <Header worksPage={worksPage} />
-    <main>{worksPage ? <Works onOpen={setProject} /> : <Home />}<ContactFooter /></main>
+    <a className="skip-link" href={worksPage ? '#works-page-title' : flowPage ? '#flow-title' : '#work'}>Skip to selected work</a>
+    <Header worksPage={worksPage || flowPage} />
+    <main>{worksPage ? <Works /> : flowPage ? <FlowCase /> : <Home />}<ContactFooter /></main>
     <dialog ref={dialog} className="content-dialog project-dialog" onClose={() => setProject(null)} onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }} aria-labelledby="project-dialog-title">
       {project && <div className="dialog-content"><button className="dialog-close" onClick={() => dialog.current?.close()} aria-label="Close project overview"><X size={24} weight="light" /></button>
         <p className="eyebrow">Project overview / {project.date}</p><h2 id="project-dialog-title">{project.title}</h2><p className="dialog-lead">{project.introduction}</p><p className="dialog-role">{project.role}</p>

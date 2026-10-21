@@ -1,0 +1,119 @@
+{
+  "pdf": "/assets/documents/Xuanzhu-Zhao-FLOW.pdf",
+  "pages": [
+    {
+      "src": "/assets/projects/flow/01.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#ffffff"
+    },
+    {
+      "src": "/assets/projects/flow/02.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#ffffff"
+    },
+    {
+      "src": "/assets/projects/flow/03.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#ffffff"
+    },
+    {
+      "src": "/assets/projects/flow/04.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#ffffff"
+    },
+    {
+      "src": "/assets/projects/flow/05.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#ffffff"
+    },
+    {
+      "src": "/assets/projects/flow/06.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#ffffff"
+    },
+    {
+      "src": "/assets/projects/flow/07.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#fffefb"
+    },
+    {
+      "src": "/assets/projects/flow/08.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#fffcf6"
+    },
+    {
+      "src": "/assets/projects/flow/09.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#fffcf6"
+    },
+    {
+      "src": "/assets/projects/flow/10.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#d9cebb"
+    },
+    {
+      "src": "/assets/projects/flow/11.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#d9cebb"
+    },
+    {
+      "src": "/assets/projects/flow/12.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#d9cebb"
+    },
+    {
+      "src": "/assets/projects/flow/13.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#d9cebb"
+    },
+    {
+      "src": "/assets/projects/flow/14.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#404040"
+    },
+    {
+      "src": "/assets/projects/flow/15.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#404040"
+    },
+    {
+      "src": "/assets/projects/flow/16.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#404040"
+    },
+    {
+      "src": "/assets/projects/flow/17.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#404040"
+    },
+    {
+      "src": "/assets/projects/flow/18.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#404040"
+    },
+    {
+      "src": "/assets/projects/flow/19.png",
+      "width": 3840,
+      "height": 2160,
+      "gapColor": "#ffffff"
+    }
+  ]
+}

@@ -157,6 +157,7 @@ function FeaturedCase() {
   }, [project.pages.length]);
   return <section className={`featured-case page-gutter${project.pages.length ? ' has-case' : ''}`} id="work" aria-labelledby="work-title">
     <div className="section-heading featured-heading"><h2 id="work-title">Selected work</h2></div>
+    {project.pages.length > 0 && <div className="featured-case-lead"><h3>PATHS</h3><p>A clearer way to plan, adjust, and revisit a journey.</p></div>}
     {!project.pages.length && <div className="case-intro"><p className="eyebrow">01 / {project.subtitle}</p><h3>{project.title}</h3><p>{project.description}</p></div>}
     {project.pages.length > 0 && <CaseContents />}
     {project.pages.length ? <div className="case-pages" ref={container}>

@@ -116,6 +116,9 @@ body{min-width:0}
 .wordmark{font-size:18px;letter-spacing:-.035em;white-space:nowrap}
 .featured-heading{justify-content:center;text-align:center}
 .has-case .featured-heading{margin-bottom:14px;justify-content:flex-start;text-align:left;padding-left:min(4.29vw,88.4px);box-sizing:border-box}
+.featured-case-lead{width:min(66vw,1360px);max-width:none;margin:26px auto 0;padding-left:min(4.29vw,88.4px)}
+.featured-case-lead h3{font-size:clamp(64px,7vw,102px);font-weight:400;line-height:1;letter-spacing:-.065em}
+.featured-case-lead p{margin-top:16px;color:#a9a9a6;font-size:15px;line-height:1.45;letter-spacing:-.015em}
 .has-case .case-pages{margin-top:42px}
 .case-sheet[id]{scroll-margin-top:14px}
 .case-contents{--toc-width:clamp(116px,12vw,156px);position:fixed;z-index:30;right:max(12px,calc((100vw - min(66vw,1360px))/4 - var(--toc-width)/2));top:50%;width:var(--toc-width);transform:translateY(calc(-50% + 8px));opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,transform .25s,visibility .25s;display:flex;flex-direction:column;align-items:center;gap:18px}
@@ -131,6 +134,7 @@ body{min-width:0}
 .contents-toggle{display:none}
 @media(max-width:800px){.case-contents{top:auto;bottom:20px;right:16px;width:162px;gap:10px;transform:translateY(8px)}.case-contents.is-visible{transform:none}.case-back-top{width:36px;height:36px}.contents-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;min-height:42px;padding:12px 14px;background:#151515;border:1px solid #444;font-size:12px;color:#ddd}.case-contents nav{display:none}.case-contents.is-expanded nav{display:flex}.case-contents nav a{font-size:12px;min-height:43px}.case-contents.is-expanded{gap:8px}.case-contents .chapter-number{font-size:9px}}
 @media(max-width:650px){.wordmark{font-size:12px;letter-spacing:-.04em}.has-case .case-pages{margin-top:30px}.has-case .featured-heading{margin-bottom:10px;padding-left:calc(6.5% - 7px)}.main-nav{gap:18px}}
+@media(max-width:650px){.featured-case-lead{width:100%;margin-top:24px;padding-left:calc(6.5% - 7px)}.featured-case-lead h3{font-size:58px}.featured-case-lead p{max-width:300px;margin-top:12px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){.case-contents{transition:none}}
 .case-sheet{position:relative}.case-chapter-marker{position:absolute;left:0;width:1px;height:1px;scroll-margin-top:14px;pointer-events:none}
 

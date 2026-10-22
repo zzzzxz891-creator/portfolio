@@ -13,7 +13,7 @@ export const projects = assetData([
   },
   {
     id: 'flow', title: 'FLOW', subtitle: 'Emotion & interaction · Course project',
-    image: '/assets/projects/flow/01.png', imageAlt: 'Cover of the FLOW case study', href: '/works/flow',
+    image: '/assets/projects/flow/01.png?v=597de1d07175', imageAlt: 'Cover of the FLOW case study', href: '/works/flow',
     date: 'Dec 2025 — Jan 2026', role: 'Experience design & motion prototyping',
     introduction: 'Translating ideas from Chinese aesthetics into an experience for recording and sharing emotions.',
     details: [

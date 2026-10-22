@@ -16,6 +16,100 @@ const caseChapters = [
   { id: 'case-design-solutions', page: 12, label: 'Design solutions' },
 ];
 
+// Boundaries follow the visual sections in the original Figma pages. The image
+// itself remains the final frame, so no text or artwork is reconstructed.
+const caseMotionBands = {
+  2: [0, .34, .68, 1],
+  3: [0, .25, .61, 1],
+  4: [0, .31, .62, 1],
+  5: [0, .24, .53, .78, 1],
+  6: [0, .34, .67, 1],
+  7: [0, .50, 1],
+  8: [0, .50, 1],
+  9: [0, .28, .55, .79, 1],
+  10: [0, .34, .67, 1],
+  11: [0, .37, .70, 1],
+};
+
+function CasePageImage({ page, index }) {
+  const pageNumber = index + 1;
+  const boundaries = caseMotionBands[pageNumber];
+  const imageRef = useRef(null);
+  const [phase, setPhase] = useState(boundaries ? 'idle' : 'complete');
+  const [revealed, setRevealed] = useState(0);
+  useEffect(() => {
+    if (!boundaries || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setPhase('complete');
+      return;
+    }
+    const image = imageRef.current;
+    if (!image) return;
+    // A restored scroll position or chapter jump must show the original page
+    // immediately rather than hiding already-visible content.
+    if (image.getBoundingClientRect().top < window.innerHeight) {
+      setPhase('complete');
+      return;
+    }
+    let frame = 0;
+    let count = 0;
+    let finished = false;
+    let finishTimer = 0;
+    const measure = () => {
+      frame = 0;
+      if (finished) return;
+      const rect = image.getBoundingClientRect();
+      if (rect.bottom < 0) {
+        finished = true;
+        setPhase('complete');
+        return;
+      }
+      const next = boundaries.slice(0, -1).filter(start => rect.top + rect.height * start < window.innerHeight * .82).length;
+      if (next > count) {
+        count = next;
+        setPhase('active');
+        setRevealed(next);
+        if (next === boundaries.length - 1) {
+          finishTimer = window.setTimeout(() => {
+            finished = true;
+            setPhase('complete');
+          }, 650);
+        }
+      }
+    };
+    const queue = () => { if (!frame) frame = requestAnimationFrame(measure); };
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue);
+    queue();
+    return () => {
+      cancelAnimationFrame(frame);
+      clearTimeout(finishTimer);
+      window.removeEventListener('scroll', queue);
+      window.removeEventListener('resize', queue);
+    };
+  }, [pageNumber]);
+  const imageProps = {
+    src: page.src,
+    srcSet: page.srcSet,
+    sizes: '(max-width:650px) calc(100vw - 24px), (min-width:2061px) 1360px, 66vw',
+    width: page.width,
+    height: page.height,
+    decoding: 'async',
+  };
+  return <span className="case-motion-image" data-motion-state={phase}>
+    <img {...imageProps} ref={imageRef} className="case-motion-original" alt={page.alt || `Paths case study page ${pageNumber}`} loading={index === 0 ? 'eager' : 'lazy'} />
+    {phase === 'active' && boundaries.slice(0, -1).map((start, band) => <img
+      {...imageProps}
+      key={start}
+      className="case-motion-band"
+      style={{ clipPath: `inset(${start * 100}% 0 ${(1 - boundaries[band + 1]) * 100}% 0)` }}
+      data-visible={band < revealed ? 'true' : 'false'}
+      alt=""
+      aria-hidden="true"
+      draggable="false"
+    />)}
+  </span>;
+}
+
 function scrollToSection(id) {
   document.getElementById(id)?.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
 }
@@ -161,11 +255,11 @@ function FeaturedCase() {
     {!project.pages.length && <div className="case-intro"><p className="eyebrow">01 / {project.subtitle}</p><h3>{project.title}</h3><p>{project.description}</p></div>}
     {project.pages.length > 0 && <CaseContents />}
     {project.pages.length ? <div className="case-pages" ref={container}>
-      {pageGroups.map(group => <div className={`case-page${group.length > 1 ? ' is-joined' : ''}${[5, 8, 11, 12].includes(group[0].index + 1) ? ' is-chapter-start' : ''}`} key={group[0].page.src} data-page-group={group.map(item => item.index + 1).join('-')}>
+      {pageGroups.map(group => <div className={`case-page${group.length > 1 ? ' is-joined' : ''}${caseMotionBands[group[0].index + 1] ? ' is-motion-page' : ''}${[5, 8, 11, 12].includes(group[0].index + 1) ? ' is-chapter-start' : ''}`} key={group[0].page.src} data-page-group={group.map(item => item.index + 1).join('-')}>
         {group.map(({ page, index }) => <figure className="case-sheet" key={page.src} data-page-number={index + 1} id={caseChapters.find(chapter => chapter.page === index + 1 && !chapter.offset)?.id}>
         {caseChapters.filter(chapter => chapter.page === index + 1 && chapter.offset).map(chapter => <span key={chapter.id} id={chapter.id} className="case-chapter-marker" style={{ top: chapter.offset }} aria-hidden="true" />)}
         <button className="case-page-link" onClick={() => { setZoomed(false); setActivePage(index); }} aria-label={`View page ${index + 1} of ${project.pages.length} in full size`} title={`View page ${String(index + 1).padStart(2, '0')} in full size`}>
-          <img src={page.src} srcSet={page.srcSet} sizes="(max-width:650px) calc(100vw - 24px), (min-width:2061px) 1360px, 66vw" width={page.width} height={page.height} alt={page.alt || `${project.title} — case study page ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+          <CasePageImage page={page} index={index} />
         </button>
         </figure>)}
       </div>)}

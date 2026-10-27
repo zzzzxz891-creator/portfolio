@@ -226,4 +226,3 @@ html.paw-mode{background:#fff;color:#171717;--muted:#666;--line:#e5e5e5}
 .paw-reader .reader-zoom{color:#555}
 @media(max-width:900px){.paw-case-heading,.paw-pages,.paw-case-end{width:min(82vw,1360px)}}
 @media(max-width:650px){.works-page .project-paw-print{order:2}.paw-case{padding-top:116px;padding-bottom:70px}.paw-case-heading,.paw-pages,.paw-case-end{width:100%}.paw-case-heading{margin-bottom:28px}.paw-back{margin-bottom:17px}.paw-case-heading h1{font-size:42px}.paw-case-heading p{margin-top:8px;font-size:13px}.paw-pages{gap:34px}.paw-case-end{margin-top:24px}}
-

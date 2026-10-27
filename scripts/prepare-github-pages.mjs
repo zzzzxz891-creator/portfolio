@@ -10,4 +10,3 @@ mkdirSync(path.join(output, 'works/paw-print'), { recursive: true });
 copyFileSync(path.join(output, 'index.html'), path.join(output, 'works/paw-print/index.html'));
 writeFileSync(path.join(output, '.nojekyll'), '');
 console.log('Prepared GitHub Pages entrypoints, including /works/, /works/flow/, and /works/paw-print/ refresh.');
-

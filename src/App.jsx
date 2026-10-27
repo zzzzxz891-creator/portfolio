@@ -58,8 +58,8 @@ function Downloads() {
     <button ref={trigger} className="download-trigger" aria-expanded={open} aria-controls="download-options"
       onFocus={() => { if (suppressFocus.current) { suppressFocus.current = false; return; } show(); }} onClick={show}>Download PDF<ArrowDown size={14} weight="light" aria-hidden="true" /></button>
     <div className="download-dropdown" id="download-options" role="group" aria-label="PDF downloads" hidden={!open}>
-      <a href={content.resumePdf} download="Xuanzhu-Zhao-Resume.pdf"><span>Resume</span><DownloadSimple size={18} weight="light" aria-hidden="true" /></a>
-      {content.portfolioPdf ? <a href={content.portfolioPdf} download="Xuanzhu-Zhao-Portfolio.pdf"><span>Portfolio</span><DownloadSimple size={18} weight="light" aria-hidden="true" /></a>
+      <a href={content.resumePdf} download="赵轩竹个人简历.pdf"><span>Resume</span><DownloadSimple size={18} weight="light" aria-hidden="true" /></a>
+      {content.portfolioPdf ? <a href={content.portfolioPdf} download="赵轩竹作品集.pdf"><span>Portfolio</span><DownloadSimple size={18} weight="light" aria-hidden="true" /></a>
         : <span className="download-unavailable" aria-disabled="true"><span>Portfolio</span><small>Coming soon</small></span>}
     </div>
   </div>;
@@ -269,7 +269,7 @@ function FlowCase() {
     return () => { document.body.style.overflow = previousOverflow; };
   }, [activePage]);
   return <section className="flow-case page-gutter" id="top" aria-labelledby="flow-title">
-    <div className="flow-case-heading"><div><LocalLink href="/works" className="flow-back">← &nbsp;All work</LocalLink><h1 id="flow-title">FLOW</h1><p>Finding balance in an inner rhythm.</p></div><a className="flow-download" href={flow.pdf} download="Xuanzhu-Zhao-FLOW.pdf">Download case study PDF<DownloadSimple size={17} weight="light" aria-hidden="true" /></a></div>
+    <div className="flow-case-heading"><div><LocalLink href="/works" className="flow-back">← &nbsp;All work</LocalLink><h1 id="flow-title">FLOW</h1><p>Finding balance in an inner rhythm.</p></div><a className="flow-download" href={content.portfolioPdf} download="赵轩竹作品集.pdf">Download portfolio PDF<DownloadSimple size={17} weight="light" aria-hidden="true" /></a></div>
     <div className="flow-pages" aria-label="FLOW case study, 19 pages">
       {flow.pages.map((page, index) => <div className={`flow-sheet${page.chapterBreakAfter ? ' is-chapter-break' : ''}${page.width > 3840 ? ' is-wide' : ''}`} key={page.src} style={{ backgroundColor: page.gapColor, '--flow-wide-vw': `${(66 * page.width / 3840).toFixed(2)}vw`, '--flow-wide-max': `${Math.round(1360 * page.width / 3840)}px` }}>
         <button className="flow-page-link" onClick={() => { setZoomed(false); setActivePage(index); }} aria-label={`View FLOW page ${index + 1} of ${flow.pages.length} at full size`}>
@@ -277,7 +277,7 @@ function FlowCase() {
         </button>
       </div>)}
     </div>
-    <div className="flow-case-tail"><div className="flow-end"><LocalLink href="/works">← All work</LocalLink><a href={flow.pdf} download="Xuanzhu-Zhao-FLOW.pdf">Download PDF <DownloadSimple size={17} weight="light" aria-hidden="true" /></a></div></div>
+    <div className="flow-case-tail"><div className="flow-end"><LocalLink href="/works">← All work</LocalLink><a href={content.portfolioPdf} download="赵轩竹作品集.pdf">Download portfolio PDF <DownloadSimple size={17} weight="light" aria-hidden="true" /></a></div></div>
     <dialog ref={reader} className="case-reader" aria-label="FLOW page reader" onClose={() => setActivePage(null)} onClick={event => { if (event.target === event.currentTarget) reader.current?.close(); }}>
       {activePage !== null && <div className="case-reader-content"><div className="case-reader-toolbar"><span>FLOW · Page {String(activePage + 1).padStart(2, '0')} / {flow.pages.length}</span><div><button className="reader-zoom" aria-pressed={zoomed} onClick={() => setZoomed(value => !value)}>{zoomed ? 'Fit width' : 'Zoom in'}</button><button className="reader-close" onClick={() => reader.current?.close()} aria-label="Close page reader"><X size={22} weight="light" /></button></div></div>
         <div className={`case-reader-scroll${zoomed ? ' is-zoomed' : ''}`} tabIndex={0} aria-label="Scrollable full-size image"><img src={flow.pages[activePage].src} width={flow.pages[activePage].width} height={flow.pages[activePage].height} alt={`FLOW case study page ${activePage + 1}`} style={zoomed ? { width: Math.min(flow.pages[activePage].width, Math.max(1400, Math.min(1720, window.innerWidth - 32) * 1.7)) } : undefined} /></div></div>}

@@ -23,6 +23,13 @@ export const projects = assetData([
     ],
   },
   {
+    id: 'paw-print', title: '实验犬服务设计', subtitle: 'PAW PRINT · 退役实验犬救助系统',
+    image: '/assets/projects/paw-print/01-1600.webp?v=6158bd689b84', imageAlt: 'PAW PRINT 实验犬服务设计作品集封面', href: '/works/paw-print',
+    date: '2024 — 2025', role: 'Team project · Research, concept, prototype & modeling',
+    introduction: 'A service-system proposal connecting retired laboratory dogs with care and adoption support.',
+    details: [],
+  },
+  {
     id: 'ideation', title: 'IdeationArch', subtitle: 'AI-assisted architecture · Research project',
     image: '/assets/covers/ideation-cover.webp', imageAlt: 'Illustrative cover: calm mobile interface photographed on stone',
     date: 'Apr — Aug 2026', role: 'System interface design & research support',
@@ -45,3 +52,4 @@ export const projects = assetData([
     ],
   },
 ]);
+

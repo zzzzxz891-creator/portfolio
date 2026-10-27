@@ -3,17 +3,19 @@ import { ArrowDown, ArrowUp, ArrowUpRight, DownloadSimple, X } from '@phosphor-i
 import { PhotoTrail } from './PhotoTrail.jsx';
 import { projects } from './projects.js';
 import rawFlow from './flow-pages.json';
+import rawPawPrint from './paw-print-pages.json';
 import rawContent from './content.json';
 import { sitePath, assetData, appRoute } from './site-paths.js';
 const content = assetData(rawContent);
 const flow = assetData(rawFlow);
+const pawPrint = assetData(rawPawPrint);
 
 const caseChapters = [
-  { id: 'case-product-review', page: 3, label: 'Product audit', offset: '37.5%' },
-  { id: 'case-user-research', page: 5, label: 'User research' },
-  { id: 'case-competitive-analysis', page: 8, label: 'Competitive analysis' },
-  { id: 'case-design-strategy', page: 11, label: 'Design strategy' },
-  { id: 'case-design-solutions', page: 12, label: 'Design solutions' },
+  { id: 'case-user-research', page: 4, label: 'User research' },
+  { id: 'case-product-review', page: 7, label: 'Product audit' },
+  { id: 'case-competitive-analysis', page: 9, label: 'Competitive analysis' },
+  { id: 'case-design-strategy', page: 12, label: 'Design strategy' },
+  { id: 'case-design-solutions', page: 13, label: 'Design solutions' },
 ];
 
 function scrollToSection(id) {
@@ -161,7 +163,7 @@ function FeaturedCase() {
     {!project.pages.length && <div className="case-intro"><p className="eyebrow">01 / {project.subtitle}</p><h3>{project.title}</h3><p>{project.description}</p></div>}
     {project.pages.length > 0 && <CaseContents />}
     {project.pages.length ? <div className="case-pages" ref={container}>
-      {pageGroups.map(group => <div className={`case-page${group.length > 1 ? ' is-joined' : ''}${group[0].index >= 1 && group[0].index <= 10 ? ' is-static-page' : ''}${[5, 8, 11, 12].includes(group[0].index + 1) ? ' is-chapter-start' : ''}`} key={group[0].page.src} data-page-group={group.map(item => item.index + 1).join('-')}>
+      {pageGroups.map(group => <div className={`case-page${group.length > 1 ? ' is-joined' : ''}${group[0].index >= 1 && group[0].index <= 10 ? ' is-static-page' : ''}${[4, 7, 9, 12, 13].includes(group[0].index + 1) ? ' is-chapter-start' : ''}`} key={group[0].page.src} data-page-group={group.map(item => item.index + 1).join('-')}>
         {group.map(({ page, index }) => <figure className="case-sheet" key={page.src} data-page-number={index + 1} id={caseChapters.find(chapter => chapter.page === index + 1 && !chapter.offset)?.id}>
         {caseChapters.filter(chapter => chapter.page === index + 1 && chapter.offset).map(chapter => <span key={chapter.id} id={chapter.id} className="case-chapter-marker" style={{ top: chapter.offset }} aria-hidden="true" />)}
         <button className="case-page-link" onClick={() => { setZoomed(false); setActivePage(index); }} aria-label={`View page ${index + 1} of ${project.pages.length} in full size`} title={`View page ${String(index + 1).padStart(2, '0')} in full size`}>
@@ -217,8 +219,8 @@ function ProjectCard({ project }) {
 
 function Works() {
   return <section className="works-page page-gutter" id="top" aria-labelledby="works-page-title">
-    <div className="works-page-heading"><h1 id="works-page-title">Work</h1><p>Selected projects / 02</p></div>
-    <div className="masonry"><div className="masonry-column"><ProjectCard project={projects[0]} /></div>
+    <div className="works-page-heading"><h1 id="works-page-title">Work</h1><p>Selected projects / 03</p></div>
+    <div className="masonry"><div className="masonry-column"><ProjectCard project={projects[0]} /><ProjectCard project={projects[2]} /></div>
       <div className="masonry-column"><ProjectCard project={projects[1]} /></div></div>
   </section>;
 }
@@ -283,11 +285,44 @@ function FlowCase() {
   </section>;
 }
 
+function PawPrintCase() {
+  const reader = useRef(null);
+  const [activePage, setActivePage] = useState(null);
+  const [zoomed, setZoomed] = useState(false);
+  useLayoutEffect(() => {
+    document.documentElement.classList.add('paw-mode');
+    return () => document.documentElement.classList.remove('paw-mode');
+  }, []);
+  useEffect(() => {
+    if (activePage === null) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    reader.current?.showModal();
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [activePage]);
+  return <section className="paw-case page-gutter" id="top" aria-labelledby="paw-title">
+    <div className="paw-case-heading"><LocalLink href="/works" className="paw-back">← &nbsp;All work</LocalLink><h1 id="paw-title">实验犬服务设计</h1><p>PAW PRINT · 退役实验犬救助系统</p></div>
+    <div className="paw-pages" aria-label="实验犬服务设计作品集，共 14 页">
+      {pawPrint.pages.map((page, index) => <figure className="paw-sheet" key={page.src}>
+        <button className="paw-page-link" onClick={() => { setZoomed(false); setActivePage(index); }} aria-label={`查看实验犬服务设计第 ${index + 1} 页大图`}>
+          <img src={page.src} srcSet={page.srcSet} sizes="(max-width:650px) calc(100vw - 40px), (max-width:900px) 82vw, (min-width:2061px) 1360px, 66vw" width={page.width} height={page.height} alt={page.alt} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+        </button>
+      </figure>)}
+    </div>
+    <div className="paw-case-end"><LocalLink href="/works">← All work</LocalLink></div>
+    <dialog ref={reader} className="case-reader paw-reader" aria-label="实验犬服务设计大图阅读器" onClose={() => setActivePage(null)} onClick={event => { if (event.target === event.currentTarget) reader.current?.close(); }}>
+      {activePage !== null && <div className="case-reader-content"><div className="case-reader-toolbar"><span>实验犬服务设计 · {String(activePage + 1).padStart(2, '0')} / {pawPrint.pages.length}</span><div><button className="reader-zoom" aria-pressed={zoomed} onClick={() => setZoomed(value => !value)}>{zoomed ? 'Fit width' : 'Zoom in'}</button><button className="reader-close" onClick={() => reader.current?.close()} aria-label="关闭大图"><X size={22} weight="light" /></button></div></div>
+        <div className={`case-reader-scroll${zoomed ? ' is-zoomed' : ''}`} tabIndex={0} aria-label="可滚动的作品原图"><img src={pawPrint.pages[activePage].original} width={pawPrint.pages[activePage].width} height={pawPrint.pages[activePage].height} alt={pawPrint.pages[activePage].alt} style={zoomed ? { width: Math.min(pawPrint.pages[activePage].width, Math.max(1400, Math.min(1720, window.innerWidth - 32) * 1.7)) } : undefined} /></div></div>}
+    </dialog>
+  </section>;
+}
+
 export function App() {
   const [route, setRoute] = useState(() => appRoute(window.location.pathname, window.location.hash));
   const cleanRoute = route.split('#')[0].replace(/\/+$/, '');
   const worksPage = cleanRoute === '/works';
   const flowPage = cleanRoute === '/works/flow';
+  const pawPage = cleanRoute === '/works/paw-print';
   const [project, setProject] = useState(null);
   const dialog = useRef(null);
   useEffect(() => {
@@ -309,9 +344,9 @@ export function App() {
   useEffect(() => { document.title = 'ZXZ | portfolio'; }, [worksPage]);
   useEffect(() => { if (project) dialog.current?.showModal(); document.body.style.overflow = project ? 'hidden' : ''; return () => { document.body.style.overflow = ''; }; }, [project]);
   return <>
-    <a className="skip-link" href={worksPage ? '#works-page-title' : flowPage ? '#flow-title' : '#work'}>Skip to selected work</a>
-    <Header worksPage={worksPage || flowPage} />
-    <main>{worksPage ? <Works /> : flowPage ? <FlowCase /> : <Home />}<ContactFooter /></main>
+    <a className="skip-link" href={worksPage ? '#works-page-title' : flowPage ? '#flow-title' : pawPage ? '#paw-title' : '#work'}>Skip to selected work</a>
+    <Header worksPage={worksPage || flowPage || pawPage} />
+    <main>{worksPage ? <Works /> : flowPage ? <FlowCase /> : pawPage ? <PawPrintCase /> : <Home />}<ContactFooter /></main>
     <dialog ref={dialog} className="content-dialog project-dialog" onClose={() => setProject(null)} onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }} aria-labelledby="project-dialog-title">
       {project && <div className="dialog-content"><button className="dialog-close" onClick={() => dialog.current?.close()} aria-label="Close project overview"><X size={24} weight="light" /></button>
         <p className="eyebrow">Project overview / {project.date}</p><h2 id="project-dialog-title">{project.title}</h2><p className="dialog-lead">{project.introduction}</p><p className="dialog-role">{project.role}</p>

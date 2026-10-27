@@ -200,3 +200,30 @@ html.flow-mode{background:#fffcf6;color:#26231e}
 .main-nav a:is(:hover,:focus-visible) .nav-roll-track{transform:translate3d(0,-50%,0)}
 @media(prefers-reduced-motion:reduce){.nav-roll-track{transition:none}}
 
+/* PAW PRINT is presented on a white canvas while retaining its original pages. */
+html.paw-mode{background:#fff;color:#171717;--muted:#666;--line:#e5e5e5}
+.paw-mode main,.paw-mode .site-footer{background:#fff;color:#171717}
+.paw-mode .site-header{background:#fff;color:#171717;border-bottom-color:#eaeaea}
+.paw-mode .download-dropdown{background:#fff;color:#171717;box-shadow:0 12px 35px #0002}
+.paw-mode .download-dropdown a:hover,.paw-mode .download-dropdown a:focus-visible{background:#f2f2f2}
+.paw-mode a:focus-visible,.paw-mode button:focus-visible{outline-color:#171717}
+.paw-case{padding-top:152px;padding-bottom:100px;background:#fff;color:#171717}
+.paw-case-heading,.paw-pages,.paw-case-end{width:min(66vw,1360px);margin-inline:auto}
+.paw-case-heading{margin-bottom:42px}
+.paw-back{display:inline-flex;align-items:center;min-height:25px;margin-bottom:26px;color:#666;font-size:12px}
+.paw-back:hover,.paw-case-end a:hover{color:#111}
+.paw-case-heading h1{font-size:clamp(40px,5.6vw,84px);font-weight:400;line-height:1.1;letter-spacing:-.055em}
+.paw-case-heading p{margin-top:16px;color:#666;font-size:15px;line-height:1.45}
+.paw-pages{display:grid;gap:clamp(30px,4vw,64px)}
+.paw-sheet{margin:0}
+.paw-page-link{display:block;width:100%;cursor:zoom-in;text-align:left}
+.paw-page-link img{display:block;width:100%;height:auto}
+.paw-page-link:focus-visible{outline:2px solid #171717;outline-offset:-2px}
+.paw-case-end{margin-top:40px;color:#666;font-size:12px}
+.paw-case-end a{display:inline-flex;align-items:center;min-height:36px}
+.paw-reader{background:#fff;color:#171717;border-color:#ddd}
+.paw-reader .case-reader-toolbar{background:#fff;color:#171717;border-bottom-color:#e5e5e5}
+.paw-reader .reader-zoom{color:#555}
+@media(max-width:900px){.paw-case-heading,.paw-pages,.paw-case-end{width:min(82vw,1360px)}}
+@media(max-width:650px){.works-page .project-paw-print{order:2}.paw-case{padding-top:116px;padding-bottom:70px}.paw-case-heading,.paw-pages,.paw-case-end{width:100%}.paw-case-heading{margin-bottom:28px}.paw-back{margin-bottom:17px}.paw-case-heading h1{font-size:42px}.paw-case-heading p{margin-top:8px;font-size:13px}.paw-pages{gap:34px}.paw-case-end{margin-top:24px}}
+
